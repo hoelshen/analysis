@@ -1,27 +1,20 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>
+      <!-- {{ msg }}  -->
+      MyAsyncComponent
+      </h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Hello World',
-  props: {
-    msg: String
-  },
-
-  beforeCreate(){
-    console.log('beforeCreate childs')
-  },
-  created(){
-    console.log('created childs')
-  },
-  beforeMount(){
-    console.log('beforeMount childs')
-  },
+  name: 'my-async-component',
+  // props: {
+  //   msg: String
+  // },
   mounted(){
-    console.log('mounted childs', this.msg)
+    console.log('async component')
   }
 }
 </script>

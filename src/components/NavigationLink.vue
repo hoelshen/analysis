@@ -1,29 +1,24 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div>
+    <a v-bind:href="url" class="nav-link">
+      <slot></slot>
+    </a>
+    <GlobalComponent name="66666" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Hello World',
+  name: "Navigation Link",
   props: {
-    msg: String
+    href: String
   },
-
-  beforeCreate(){
-    console.log('beforeCreate childs')
-  },
-  created(){
-    console.log('created childs')
-  },
-  beforeMount(){
-    console.log('beforeMount childs')
-  },
-  mounted(){
-    console.log('mounted childs', this.msg)
+  data() {
+    return {
+      url: ""
+    };
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
